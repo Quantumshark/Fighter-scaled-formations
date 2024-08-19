@@ -1,0 +1,76 @@
+# Copyright (c) 2024 by Quantumshark
+#
+# Endless Sky is free software: you can redistribute it and/or modify it under the
+# terms of the GNU General Public License as published by the Free Software
+# Foundation, either version 3 of the License, or (at your option) any later version.
+#
+# Endless Sky is distributed in the hope that it will be useful, but WITHOUT ANY
+# WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+# PARTICULAR PURPOSE. See the GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License along with
+# this program. If not, see <https://www.gnu.org/licenses/>.
+
+# Formation where ships fly in a diagonal line left behind the formation leader.
+formation "Fighters: Echelon (left)"
+	position -90 90
+		repeat -40 40
+
+
+# Formation where ships fly in a diagonal line right behind the formation leader.
+formation "Fighters: Echelon (right)"
+	position 90 90
+		repeat 40 40
+
+
+# Formation where ships form a line right and left of the formation leader.
+formation "Fighters: Line (sides)"
+	flippable x y
+	rotatable 180
+	position -100 0
+		repeat -60 0
+	position 100 0
+		repeat 60 0
+
+
+# Formation where ships form a line behind the formation leader.
+formation "Fighters: Line (trailing)"
+	flippable y
+	position 0 100
+		repeat 0 60
+
+
+# Formation with two legs extending on a 30 degree angle behind the lead ship.
+formation "Fighters: Vic"
+	flippable y
+	position -90 54
+		repeat -40 27
+	position 90 54
+		repeat 40 27
+
+
+# X shaped formation that rotates with the flagship.
+formation "Fighters: X"
+	flippable x y
+	rotatable 90
+	position -90 90
+		repeat -40 40
+	position 90 90
+		repeat 40 40
+	position 90 -90
+		repeat 40 -40
+	position -90 -90
+		repeat -40 -40
+
+
+# Stable X or + shaped formation that doesn't rotate with the flagship.
+formation "Fighters: X stable"
+	rotatable 0
+	position -90 90
+		repeat -40 40
+	position 90 90
+		repeat 40 40
+	position 90 -90
+		repeat 40 -40
+	position -90 -90
+		repeat -40 -40
